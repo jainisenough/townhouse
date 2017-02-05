@@ -1,7 +1,7 @@
 {
   "db": {
     "host": "ds159767.mlab.com",
-    "port": 59767,
+    "port": 43559,
     "user": "root",
     "password": "toor"
   },
