@@ -25,19 +25,5 @@ boot(app, __dirname, function(err) {
 
   // start the server if `$ node server.js`
   if (require.main === module)
-    var server = app.start();
-
-  //socket server
-  app.io = require('socket.io')(server);
-
-  app.io.on('connection', function(socket) {
-    console.log('new connection');
-
-    socket.on('login', function(userData){
-      console.log(userData);
-    });
-    socket.on('logout', function(userData){
-      console.log(userData);
-    });
-  });
+    app.start();
 });
