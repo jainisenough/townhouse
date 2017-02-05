@@ -10,7 +10,10 @@ module.exports = function (server) {
   }
 
   router.get(/^((?!\.).)*$/, function (req, res) {
-    res.sendFile('/index.html', {root: __dirname + '/../../client/views'});
+    if (process.env.NODE_ENV === 'production')
+      res.send(server.loopback.status());
+    else
+      res.sendFile('/index.html', {root: __dirname + '/../../client/views'});
   });
 
   server.use(router);
