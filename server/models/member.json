@@ -1,0 +1,48 @@
+{
+  "name": "Member",
+  "base": "User",
+  "strict": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "first_name": {
+      "type": "string"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string",
+      "default": ""
+    },
+    "social": {
+      "type": "object",
+      "default": {}
+    },
+    "status": {
+      "type": "number",
+      "default": 1
+    },
+    "created": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "modified": {
+      "type": "date",
+      "defaultFn": "now"
+    },
+    "realm": false
+  },
+  "validations": [{
+    "status": [{
+      "validation": "inclusion",
+      "options": {
+        "in": [0, 1, 2]
+      }
+    }]
+  }],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

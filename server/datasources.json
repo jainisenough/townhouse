@@ -1,0 +1,22 @@
+{
+  "db": {
+    "host": "127.0.0.1",
+    "database": "townhall",
+    "name": "townhall",
+    "connector": "mongodb",
+    "allowExtendedOperators": true
+  },
+  "file": {
+    "name": "file",
+    "connector": "loopback-component-storage",
+    "root": "./client/images",
+    "maxFileSize": "20971520",
+    "allowedContentTypes": [
+      "image/png", "image/jpeg", "image/jpg",
+      "video/webm", "video/ogg", "video/mp4",
+      "audio/webm", "audio/ogg", "audio/mp3",
+      "text/csv", "application/csv", "application/vnd.ms-excel",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ]
+  }
+}
