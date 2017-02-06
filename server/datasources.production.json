@@ -1,9 +1,9 @@
 {
   "db": {
-    "host": "ds143559.mlab.com",
-    "port": 43559,
-    "user": "root",
-    "password": "toor"
+    "host": "127.0.0.1",
+    "port": 27017,
+    "user": "",
+    "password": ""
   },
   "file": {
     "root": "./client/images"
