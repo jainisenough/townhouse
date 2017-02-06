@@ -36,5 +36,9 @@
   "Member": {
     "dataSource": "db",
     "public": true
+  },
+  "Container": {
+    "dataSource": "db",
+    "public": true
   }
 }
